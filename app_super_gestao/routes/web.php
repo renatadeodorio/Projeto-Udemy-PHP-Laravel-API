@@ -1,10 +1,13 @@
 <?php
 
+
+use App\Http\Controllers\ContatoController;
+use App\Http\Controllers\PrincipalController;
+use App\Http\Controllers\SobreNosController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', [PrincipalController::class, 'principal'])->name('site.index');
 
-Route::get('/',[\App\Http\Controllers\PrincipalController::class,'principal']);
+Route::get('/sobrenos', [SobreNosController::class, 'sobreNos'])->name('site.sobrenos');
 
-Route::get('/',[\App\Http\Controllers\SobreNosController::class,'sobreNos']);
-
-Route::get('/',[\App\Http\Controllers\ContatoController::class, 'contato']);
+Route::get('/contato', [ContatoController::class, 'contato'])->name('site.contato');
