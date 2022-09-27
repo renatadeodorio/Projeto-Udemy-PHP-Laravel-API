@@ -202,7 +202,7 @@
         <div class="topo">
 
             <div class="logo">
-                <img src="img/logo.png">
+                <img src="{{ asset('img/logo.png') }}">
             </div>
 
             <div class="menu">
@@ -258,7 +258,7 @@
             </div>
             <div class="localizacao">
                 <h2>Localização</h2>
-                <img src="{{ asset("img/mapa.png">) }}">
+                <img src="{{ asset('img/mapa.png') }}">
             </div>
         </div>
     </body>
