@@ -15,29 +15,24 @@ class FornecedorSeeder extends Seeder
      */
     public function run()
     {
-        //Instanciando o objeto
-        $fornecedor = new Fornecedor();
-        $fornecedor->nome = 'Fornecedor 100';
-        $fornecedor->site = 'fornecedor100.com.br';
-        $fornecedor->uf = 'CE';
-        $fornecedor->email = 'contato@fornecedor100.com.br';
-        $fornecedor->save();
+         Fornecedor::create([
+             'nome' => 'Fornecedor 100',
+             'site' => 'www.fornecedor100.example.com',
+             'uf' => 'SP',
+             'email' => 'fornecedor100@example.com.br'
+         ]);
 
-        //O metodo create (atenção para o atributo fillable da classe)
-        Fornecedor::create([
+         Fornecedor::create([
             'nome' => 'Fornecedor 200',
-            'site' => 'fornecedor200.com.br',
+            'site' => 'www.fornecedor200.example.com',
             'uf' => 'RS',
-            'email' => 'contato@fornecedor200.com.br',
+            'email' => 'fornecedor200@example.com.br'
         ]);
-
-        //insert
-        DB::table('fornecedores')->insert([
+        Fornecedor::create([
             'nome' => 'Fornecedor 300',
-            'site' => 'fornecedor300.com.br',
-            'uf' => 'SP',
-            'email' => 'contato@fornecedor300.com.br'
+            'site' => 'www.fornecedor300.example.com',
+            'uf' => 'SC',
+            'email' => 'fornecedor300@example.com.br'
         ]);
-
     }
 }
