@@ -33,7 +33,7 @@ class ClienteController extends Controller
      */
     public function store(StoreClienteRequest $request)
     {
-        //
+        return 'oi cheguei aqui!!!';
     }
 
     /**

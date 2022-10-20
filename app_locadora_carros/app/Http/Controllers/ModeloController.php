@@ -14,7 +14,7 @@ class ModeloController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -35,7 +35,9 @@ class ModeloController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $modelo = Modelo::create($request->only(['marca_id','nome','imagem','numero_portas','lugares','air_bag','abs']));
+        return $modelo;
+
     }
 
     /**
